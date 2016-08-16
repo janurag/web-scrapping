@@ -54,7 +54,7 @@ async.parallel(asyncTasks, function(err) {
 });
 
 function crawl(urlList, callback) {
-        
+
     var crawlTasks = [];
     for(var i =0; i < urlList.length; i++ ) {
         crawlTasks.push(crawlInternal.bind(null, urlList[i]));
@@ -77,7 +77,7 @@ function crawlInternal(link, cb) {
         }
         var $ = cheerio.load(html);
         var cat = $("#srchbx").attr("value");
-        var appendTasks = [];        
+        var appendTasks = [];
         $(".cntanr").each(function(val, element){
             var name = $(this).find(".jcn").children("a").html();
             var phone = $(this).find(".contact-info").children().next().text();
@@ -88,21 +88,21 @@ function crawlInternal(link, cb) {
                 name		: 			name,
                 cateogory 	: 		     cat,
                 phone		:         phone,
-                city		:  			"Noida",	
+                city		:  			"Noida",
                 address 	:     			add,
                 ratings     :  			ratings
 
             }
             appendTasks.push(appendFile.bind(null, metadata));
         });
-        
-            
+
+
         function appendFile(metadata, callback){
             fs.appendFile('jusdialBetter.json', JSON.stringify(metadata,null,4)  + ',\n', function (err) {
                 if (err){
                     return callback(err);
                 }
-                callback();  
+                callback();
             });
         }
 
@@ -114,7 +114,7 @@ function crawlInternal(link, cb) {
             console.log("Done crawling:- " +link);
             cb();
         });
-        
+
     });
 
 }
