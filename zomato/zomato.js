@@ -5,7 +5,7 @@ var cheerio = require('cheerio');
 var url = [];
 
 function main (){
-        city = "noida-restaurants";
+        city = "nagpur/restaurants";
         start = 1;
         end = 75;
         urlGenrator(city, start, end, function() {
@@ -15,7 +15,7 @@ function main (){
 
 function urlGenrator(city, start, end, callback) {
         for (i = start; i<end ; i++) {
-                url.push('https://www.zomato.com/ncr/'+ city +'?page=' + i);
+                url.push('https://www.zomato.com/'+ city +'?page=' + i);
         }
         callback();
 };
@@ -44,21 +44,21 @@ function crawler() {
                             }
                             var metadata = {
                                 name: name,
-                                category: category,  
+                                category: category,
                                 rating : rating,
                                 reviews : reviews,
                                 address : address,
                                 phone   : phone,
                                 homeDelivery : homeDelivery
                                 };
-                               
-                            
+
+
                             fs.appendFile ('zomato.json', JSON.stringify(metadata,null,4)  + ',\n', function (err) {
                                 if (err) {
                                     console.log(err);
                                 }
                                 console.log(name);
-                                        
+
                             });
                         });
 
