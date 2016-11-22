@@ -4,8 +4,10 @@ var request = require('request');
 var cheerio = require('cheerio');
 var url = [];
 
+var city = "nagpur/restaurants";
+
 function main (){
-        city = "nagpur/restaurants";
+        city = city;
         start = 1;
         end = 75;
         urlGenrator(city, start, end, function() {
@@ -14,6 +16,20 @@ function main (){
 };
 
 function urlGenrator(city, start, end, callback) {
+    // var post_data = {
+    //
+    // }
+    // var options = {
+    //         method: 'POST',
+    //         url   :  'http://www.localdiaries.in/records/loadmore',
+    //          headers : {
+    //             'Connection': 'keep-alive',
+    //             // 'Host'      : 'www.justdial.com',
+    //             // 'Content-Type': 'application/x-www-form-urlencoded',
+    //             //  'Content-Length': Buffer.byteLength(post_data),
+    //             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'
+    //         }
+    //     };
         for (i = start; i<end ; i++) {
                 url.push('https://www.zomato.com/'+ city +'?page=' + i);
         }
@@ -36,6 +52,7 @@ function crawler() {
                             var reviews = $(this).find(".content").find(".result-reviews").text().trim();
                             var address = $(this).find(".content").find(".search-result-address").text().trim();
                             var phone = $(this).find(".res-snippet-ph-info").attr("data-phone-no-str");
+                            var locality = $(this).find(".content").find(".search-page-text").find('b').text().trim();
                             var homeDelivery;
                             if ($(this).find(".o2_link")['0']) {
                                 homeDelivery = "Yes";
@@ -45,11 +62,14 @@ function crawler() {
                             var metadata = {
                                 name: name,
                                 category: category,
-                                rating : rating,
-                                reviews : reviews,
-                                address : address,
                                 phone   : phone,
-                                homeDelivery : homeDelivery
+                                city    : city,
+                                //rating : rating,
+                                //reviews : reviews,
+                                address : address,
+                                //homeDelivery : homeDelivery
+                                locality : locality,
+                                source : "Zomato"
                                 };
 
 

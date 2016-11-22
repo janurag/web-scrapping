@@ -20,17 +20,16 @@ of the crawling function. All changing variables are globally defined in the
 respective functions
 */
 
-
 zomato();
 //justdial();
-sulekha();
-grotal();
+//sulekha();
+//grotal();
 //localdiaries();
 
 function zomato() {
 
     var url = [];
-    var city = "ncr/faridabad-restaurants";
+    var city = "nagpur/restaurants";
 
     function main (){
             city = city;
@@ -115,34 +114,34 @@ function zomato() {
 
 function justdial(){
 
-    var city = "Surat";
+    var city = "Chandigarh";
     var url = [
-                     'http://www.justdial.com/Surat/Flower-Shops/page-',
-                     'http://www.justdial.com/Surat/Hardware-Shops/page-',
-                     'http://www.justdial.com/Surat/Hardware-Dealers/page-',
-                     'http://www.justdial.com/Surat/Hardware-Wholesalers/page-',
-                     'http://www.justdial.com/Surat/Hardware-Material-Dealers/page-',
-                     'http://www.justdial.com/Surat/Mineral-Water-Distributors/page-',
-                     'http://www.justdial.com/Surat/Pharmaceutical-Distributors/page-',
-                     'http://www.justdial.com/Surat/Coco-Cola-Soft-Drink-Distributors/page-',
-                     'http://www.justdial.com/Surat/Soft-Drink-Distributors/page-',
-                     'http://www.justdial.com/Surat/Newspaper-Distributors/page-',
-                     'http://www.justdial.com/Surat/Medicine-Distributors/page-',
-                     'http://www.justdial.com/Surat/FMCG-Product-Distributors/page-',
-                     'http://www.justdial.com/Surat/Standy-Wholeseller/page-',
-                     'http://www.justdial.com/Surat/Shoe-Dealers/page-',
-                     'http://www.justdial.com/Surat/Grocery-Stores/page-',
-                     'http://www.justdial.com/Surat/Grocery-Wholesalers/page-',
-                     'http://www.justdial.com/Surat/Grocery-Home-Delivery-Services/page-',
-                     'http://www.justdial.com/Surat/Grocery-Distributors/page-',
-                     'http://www.justdial.com/Surat/Printers/page-',
-                     'http://www.justdial.com/Surat/Printer-Dealers/page-',
-                     'http://www.justdial.com/Surat/Stationery-Wholesalers/page-',
-                     'http://www.justdial.com/Surat/Vegetable-Wholesalers/page-',
-                     'http://www.justdial.com/Surat/Dry-Fruit-Wholesalers/page-',
-                     'http://www.justdial.com/Surat/Gift-Retailers/page-',
-                     'http://www.justdial.com/Surat/Homeopathic-Medicine-Retailers/page-',
-                     'http://www.justdial.com/Surat/Allopathic-Medicine-Retailers/page-',
+                     'http://www.justdial.com/Chandigarh/Flower-Shops/page-',
+                     'http://www.justdial.com/Chandigarh/Hardware-Shops/page-',
+                     'http://www.justdial.com/Chandigarh/Hardware-Dealers/page-',
+                     'http://www.justdial.com/Chandigarh/Hardware-Wholesalers/page-',
+                     'http://www.justdial.com/Chandigarh/Hardware-Material-Dealers/page-',
+                     'http://www.justdial.com/Chandigarh/Mineral-Water-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/Pharmaceutical-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/Coco-Cola-Soft-Drink-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/Soft-Drink-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/Newspaper-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/Medicine-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/FMCG-Product-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/Standy-Wholeseller/page-',
+                     'http://www.justdial.com/Chandigarh/Shoe-Dealers/page-',
+                     'http://www.justdial.com/Chandigarh/Grocery-Stores/page-',
+                     'http://www.justdial.com/Chandigarh/Grocery-Wholesalers/page-',
+                     'http://www.justdial.com/Chandigarh/Grocery-Home-Delivery-Services/page-',
+                     'http://www.justdial.com/Chandigarh/Grocery-Distributors/page-',
+                     'http://www.justdial.com/Chandigarh/Printers/page-',
+                     'http://www.justdial.com/Chandigarh/Printer-Dealers/page-',
+                     'http://www.justdial.com/Chandigarh/Stationery-Wholesalers/page-',
+                     'http://www.justdial.com/Chandigarh/Vegetable-Wholesalers/page-',
+                     'http://www.justdial.com/Chandigarh/Dry-Fruit-Wholesalers/page-',
+                     'http://www.justdial.com/Chandigarh/Gift-Retailers/page-',
+                     'http://www.justdial.com/Chandigarh/Homeopathic-Medicine-Retailers/page-',
+                     'http://www.justdial.com/Chandigarh/Allopathic-Medicine-Retailers/page-',
 
     ];
 
@@ -256,7 +255,7 @@ function justdial(){
 
 function sulekha() {
 
-    var city = 'faridabad';
+    var city = 'gurgaon';
 
     var url = [
      'http://yellowpages.sulekha.com/ac-dealers_',
@@ -456,42 +455,42 @@ function sulekha() {
 
 function grotal() {
 
-    var city = "Faridabad";
-    var cityCode = 'C40A0P'
-    var url = [
-        'http://www.grotal.com/Faridabad/Flowers-Home-Delivery',
-        'http://www.grotal.com/Faridabad/Hardware-Shops',
-        'http://www.grotal.com/Faridabad/Hardware-Dealers-',
-        'http://www.grotal.com/Faridabad/Hardware-Wholesalers-',
-        'http://www.grotal.com/Faridabad/Hardware-Material-',
-        'http://www.grotal.com/Faridabad/Mineral-Water',
-        'http://www.grotal.com/Faridabad/Pharmaceuticals-',
-        'http://www.grotal.com/Faridabad/Coco-Cola-Soft-Drink-Distributors-',
-        'http://www.grotal.com/Faridabad/Soft-Drink-Distributors-',
-        'http://www.grotal.com/Faridabad/Newspaper-Distributors-',
-        'http://www.grotal.com/Faridabad/Medicine-Distributors-',
-        'http://www.grotal.com/Faridabad/FMCG-Distributors-',
-        'http://www.grotal.com/Faridabad/Second-Hand-Spare-Parts',
-        'http://www.grotal.com/Faridabad/Grocery-Shops',
-        'http://www.grotal.com/Faridabad/Grocery-Stores-',
-        'http://www.grotal.com/Faridabad/Grocery-Items-',
-        'http://www.grotal.com/Faridabad/Grocery-Home-Delivery-',
-        'http://www.grotal.com/Faridabad/Grocery-Distributors-',
-        'http://www.grotal.com/Faridabad/Print-Papers-',
-        'http://www.grotal.com/Faridabad/Printer-',
-        'http://www.grotal.com/Faridabad/Printer-Repair-',
-        'http://www.grotal.com/Faridabad/Stationery-Items-',
-        'http://www.grotal.com/Faridabad/Stationery-Shops-',
-        'http://www.grotal.com/Faridabad/Stationery-Goods-',
-        'http://www.grotal.com/Faridabad/Vegetable-Shops-',
-        'http://www.grotal.com/Faridabad/Vegetable-Traders',
-        'http://www.grotal.com/Faridabad/Vegetables-Home-Delivery-',
-        'http://www.grotal.com/Faridabad/Dry-Fruits-',
-        'http://www.grotal.com/Faridabad/Drycleaners-',
-        'http://www.grotal.com/Faridabad/Gift-Items-',
-        'http://www.grotal.com/Faridabad/Gift-Shops-',
-        'http://www.grotal.com/Faridabad/Homeopathic-Medicine-Wholesalers-',
-        'http://www.grotal.com/Faridabad/Allopathic-Medicines-',
+    var city = "Gurgaon-NCR";
+    var cityCode = 'C51A0P'
+    var url =[
+        'http://www.grotal.com/Gurgaon-NCR/Flowers-Home-Delivery-',
+        'http://www.grotal.com/Gurgaon-NCR/Hardware-Shops-',
+        'http://www.grotal.com/Gurgaon-NCR/Hardware-Dealers-',
+        'http://www.grotal.com/Gurgaon-NCR/Hardware-Wholesalers-',
+        'http://www.grotal.com/Gurgaon-NCR/Hardware-Material-',
+        'http://www.grotal.com/Gurgaon-NCR/Mineral-Water',
+        'http://www.grotal.com/Gurgaon-NCR/Pharmaceuticals-',
+        'http://www.grotal.com/Gurgaon-NCR/Coco-Cola-Soft-Drink-Distributors-',
+        'http://www.grotal.com/Gurgaon-NCR/Soft-Drink-Distributors-',
+        'http://www.grotal.com/Gurgaon-NCR/Newspaper-Distributors-',
+        'http://www.grotal.com/Gurgaon-NCR/Medicine-Distributors-',
+        'http://www.grotal.com/Gurgaon-NCR/FMCG-Distributors-',
+        'http://www.grotal.com/Gurgaon-NCR/Second-Hand-Spare-Parts',
+        'http://www.grotal.com/Gurgaon-NCR/Grocery-Shops',
+        'http://www.grotal.com/Gurgaon-NCR/Grocery-Stores-',
+        'http://www.grotal.com/Gurgaon-NCR/Grocery-Items-',
+        'http://www.grotal.com/Gurgaon-NCR/Grocery-Home-Delivery-',
+        'http://www.grotal.com/Gurgaon-NCR/Grocery-Distributors-',
+        'http://www.grotal.com/Gurgaon-NCR/Print-Papers-',
+        'http://www.grotal.com/Gurgaon-NCR/Printer-',
+        'http://www.grotal.com/Gurgaon-NCR/Printer-Repair-',
+        'http://www.grotal.com/Gurgaon-NCR/Stationery-Items-',
+        'http://www.grotal.com/Gurgaon-NCR/Stationery-Shops-',
+        'http://www.grotal.com/Gurgaon-NCR/Stationery-Goods-',
+        'http://www.grotal.com/Gurgaon-NCR/Vegetable-Shops-',
+        'http://www.grotal.com/Gurgaon-NCR/Vegetable-Traders',
+        'http://www.grotal.com/Gurgaon-NCR/Vegetables-Home-Delivery-',
+        'http://www.grotal.com/Gurgaon-NCR/Dry-Fruits-',
+        'http://www.grotal.com/Gurgaon-NCR/Drycleaners-',
+        'http://www.grotal.com/Gurgaon-NCR/Gift-Items-',
+        'http://www.grotal.com/Gurgaon-NCR/Gift-Shops-',
+        'http://www.grotal.com/Gurgaon-NCR/Homeopathic-Medicine-Wholesalers-',
+        'http://www.grotal.com/Gurgaon-NCR/Allopathic-Medicines-',
 
     ];
 
@@ -527,7 +526,6 @@ function grotal() {
             }
             callback();
         });
-
     }
 
     function crawlInternal(link, cb) {
@@ -606,7 +604,7 @@ function grotal() {
 function localdiaries() {
     var url = [];
 
-    var city = "Nagpur";
+    var city = "Gurgaon";
     var cat = "Restaurant";
 
     function main (){

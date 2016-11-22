@@ -4,33 +4,35 @@ var request = require('request');
 var cheerio = require('cheerio');
 var async   = require('async');
 
+var city = "Surat";
+var cityCode = 'C97A0P'
 var url = [
-                 'http://www.grotal.com/Surat/Flower-Shops-C97A0P',
-                 'http://www.grotal.com/Surat/Hardware-Shops-C97A0P',
-                 'http://www.grotal.com/Surat/Hardware-Dealers-C97A0P',
-                 'http://www.grotal.com/Surat/Hardware-Wholesalers-C97A0P',
-                 'http://www.grotal.com/Surat/Hardware-Material-C97A0P',
-                 'http://www.grotal.com/Surat/Mineral-Water-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/Pharmaceutical-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/Coco-Cola-Soft-Drink-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/Soft-Drink-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/Newspaper-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/Medicine-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/FMCG-Product-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/Standy-Wholeseller-C97A0P',
-                 'http://www.grotal.com/Surat/Shoe-Dealers-C97A0P',
-                 'http://www.grotal.com/Surat/Grocery-Stores-C97A0P',
-                 'http://www.grotal.com/Surat/Grocery-Wholesalers-C97A0P',
-                 'http://www.grotal.com/Surat/Grocery-Home-Delivery-Services-C97A0P',
-                 'http://www.grotal.com/Surat/Grocery-Distributors-C97A0P',
-                 'http://www.grotal.com/Surat/Printers-C97A0P',
-                 'http://www.grotal.com/Surat/Printer-Dealers-C97A0P',
-                 'http://www.grotal.com/Surat/Stationery-Wholesalers-C97A0P',
-                 'http://www.grotal.com/Surat/Vegetable-Wholesalers-C97A0P',
-                 'http://www.grotal.com/Surat/Dry-Fruit-Wholesalers-C97A0P',
-                 'http://www.grotal.com/Surat/Gift-Retailers-C97A0P',
-                 'http://www.grotal.com/Surat/Homeopathic-Medicine-Retailers-C97A0P',
-                 'http://www.grotal.com/Surat/Allopathic-Medicine-Retailers-C97A0P'
+                 'http://www.grotal.com/Surat/Flower-Shops-',
+                 'http://www.grotal.com/Surat/Hardware-Shops-',
+                 'http://www.grotal.com/Surat/Hardware-Dealers-',
+                 'http://www.grotal.com/Surat/Hardware-Wholesalers-',
+                 'http://www.grotal.com/Surat/Hardware-Material-',
+                 'http://www.grotal.com/Surat/Mineral-Water-Distributors-',
+                 'http://www.grotal.com/Surat/Pharmaceutical-Distributors-',
+                 'http://www.grotal.com/Surat/Coco-Cola-Soft-Drink-Distributors-',
+                 'http://www.grotal.com/Surat/Soft-Drink-Distributors-',
+                 'http://www.grotal.com/Surat/Newspaper-Distributors-',
+                 'http://www.grotal.com/Surat/Medicine-Distributors-',
+                 'http://www.grotal.com/Surat/FMCG-Product-Distributors-',
+                 'http://www.grotal.com/Surat/Standy-Wholeseller-',
+                 'http://www.grotal.com/Surat/Shoe-Dealers-',
+                 'http://www.grotal.com/Surat/Grocery-Stores-',
+                 'http://www.grotal.com/Surat/Grocery-Wholesalers-',
+                 'http://www.grotal.com/Surat/Grocery-Home-Delivery-Services-',
+                 'http://www.grotal.com/Surat/Grocery-Distributors-',
+                 'http://www.grotal.com/Surat/Printers-',
+                 'http://www.grotal.com/Surat/Printer-Dealers-',
+                 'http://www.grotal.com/Surat/Stationery-Product-Manufacturers-',
+                 'http://www.grotal.com/Surat/Vegetable-Manufacturers-',
+                 'http://www.grotal.com/Surat/Dry-Fruit-Wholesalers-',
+                 'http://www.grotal.com/Surat/Gift-Retailers-',
+                 'http://www.grotal.com/Surat/Homeopathic-Medicine-Retailers-',
+                 'http://www.grotal.com/Surat/Allopathic-Medicine-Retailers-'
 
 ];
 
@@ -40,7 +42,7 @@ console.log("Starting crawling");
 for (var i in url ) {
     var urlList = [];
     for (j=1;j<5;j++) {
-        var str = j + 'A0/'
+        var str = cityCode + j +  'A0/'
         urlList.push(url[i] + str);
         //console.log(url[i] + j);
     }
@@ -104,9 +106,10 @@ function crawlInternal(link, cb) {
                 name		: 		name,
                 cateogory 	: 		cat,
                 phone		:       phone,
-                city		:  	    "Surat",
+                city		:  	    city,
                 address 	:     	add,
-                area     :  	    area
+                locality     :  	area,
+                source       :      "grotal.com"
 
             }
             //console.log(metadata);
